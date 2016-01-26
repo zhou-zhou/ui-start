@@ -1,0 +1,191 @@
+/* Welcome to Compass. Use this file to define print styles.
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/print.css" media="print" rel="stylesheet" type="text/css" /> */
+@mixin clearfix{
+		clear: both;
+	}
+
+$highlight-text-color:white;
+$bg-color:#efefef;
+$text-color:#4f4f4f;
+$secondy-text-color:#D9DADA;
+$button-color:#6cdcac;
+@mixin radius($radius:5px)
+	{
+		border-radius:$radius;
+	}
+
+
+body{
+	font-family:'Open Sans',sans-serif;
+	font-size:62.5%;
+	text-align:center;
+	margin:0;
+	}
+.hero{
+	margin: 0;
+	background: url('../images/back11.jpg');
+	background-size: cover;
+	color:$highlight-text-color;
+header{
+	height: 2em;
+	img{
+		width: 6em;
+		height: 4em;
+		float: left;
+	}
+	ul{
+		float: right;
+		list-style-type:none;
+		li{
+			float: left;
+			margin: 1em .5em;
+			padding: .5em 1em;
+			border:1px solid transparent;
+			border-radius:2px;
+			&:last-child{
+				border:1px solid $highlight-text-color;
+			}
+		}
+
+	}
+	@include clearfix;
+}
+
+h1{
+	font-size:4em;
+	padding:1em 0 .5em 0;
+	font-weight:bold;
+}
+h2{
+	font-size:2em;
+	color:$secondy-text-color;
+}
+
+form{
+	padding:2em 0 4em 0;
+	input[type="text"]{
+		padding: 1em;
+		border: 0;
+		width: 18em;
+		margin: 0;
+		border-radius:4px 0 0 4px;
+		background:$bg-color;
+		opacity: .3;
+	}
+	input[type="button"]{
+		color: $highlight-text-color;
+		padding: 1em;
+		border:10;
+		margin: 1em 0;
+		width: 6em;
+		border-radius:0 2px 2px 0;
+		background-color:$button-color;
+		text-transform: uppercase;
+	}
+}
+
+}
+
+
+.number{
+	width:80%;
+	margin:0 auto;
+	ul{
+		position: relative;
+		top: -5em;
+		list-style-type:none;
+		li{
+			float: left;
+			width: 25%;
+			box-sizing:border-box;
+			background:$bg-color;
+			border-top:1px solid $secondy-text-color;
+			border-bottom:1px solid $secondy-text-color;
+			border-left:1px solid $secondy-text-color;
+		
+		&:last-child{
+			border-right:1px solid $secondy-text-color;
+		}
+			h2{
+				font-size: 2em;
+				padding:.5em 0;
+			}
+			h3{
+				padding:0 0 1em 0;
+			}
+
+		}
+				
+	}
+	
+
+}
+
+@import "icomoon";
+
+.how-it-works{
+
+	h2{
+		text-transform: uppercase;
+		margin-top:160px;
+		text-align:center;
+		font-size:2em;
+		padding:1em 0;
+
+		&:after{
+			display: block;
+			content: "";
+			background-color:grey;
+			width: 2em;
+			height: .1em;
+			margin: .4em auto;
+
+		}
+
+	}
+	ul{
+		list-style-type: none;
+		li{
+	     float:left;
+	     width: 33.33%;
+
+	     i{
+	     	font-size: 3.6em;
+	     }
+	     .icon-file-text{
+	     	color: #ECA95A;
+	     }
+	     .icon-pencil{
+	     	color: #AC9CD2;
+	     }
+	     .icon-users{
+	     	color: #4D99CB;
+	     }     
+	    }
+
+			
+	}
+	.number{
+		text-align:center;
+		font-size: 2em;
+		color:$text-color;
+		border:1px solid $text-color;
+		width: 1em;
+		height: 1em;
+		display: block;
+		margin: 1em auto 3em auto;
+		padding:.4em;
+		background-color:$bg-color;
+		line-height: 20px;
+		@include radius(100%)
+
+	}
+    img{
+    	height: 40px;
+    	width: 40px;
+    }
+
+
+}
+
